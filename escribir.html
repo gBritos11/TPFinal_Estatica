@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspirAcción</title>
+    <!-- FUENTE -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <!-- ICONO -->
+    <link rel="icon" href="../Imagenes/icono.svg" type="image/svg+xml">
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="../Estilos/style.css">
+</head>
+<body class="pagina__escribir">
+    <div class="escribir__contenedor">
+        <div class="nav">
+            <div class="nav__logo" id="inicio"></div>
+            <div class="nav__botones">
+                <div class="botones">
+                    <ul class="botones__lista">
+                        <li id="escribir">Escribir</li>
+                        <li id="categoria">Categorías</li>
+                        <li id="sobreInspiraccion">Sobre inspirAcción</li>
+                    </ul>
+                </div>
+                <div class="perfil perfil--nav" id="perfil"></div>
+            </div>
+        </div>
+
+        <div class="escribir">
+            <h2 class="galeria__titulo galeria__titulo--escribir">Escribe tu frase Inspiradora</h1>
+            
+            <div class="galeria__fila galeria__fila--escribir">
+                <h2 class="galeria__titulo--fila">Elige tu color de fondo</h2>
+
+                <div class="galeria__carrusel galeria__carrusel--escribir">
+                    <div class="escribir__frase--color escribir__frase--color--uno"></div>
+                    <div class="escribir__frase--color escribir__frase--color--dos"></div>
+                    <div class="escribir__frase--color escribir__frase--color--tres"></div>
+                    <div class="escribir__frase--color escribir__frase--color--cuatro"></div>
+                    <div class="escribir__frase--color escribir__frase--color--cinco"></div>
+                    <div class="escribir__frase--color escribir__frase--color--seis"></div>
+                    <div class="escribir__frase--color escribir__frase--color--siete"></div>
+                    <div class="escribir__frase--color escribir__frase--color--ocho"></div>
+                    <div class="escribir__frase--color escribir__frase--color--nueve"></div>
+                    <div class="escribir__frase--color escribir__frase--color--10"></div>
+                    <div class="escribir__frase--color escribir__frase--color--11"></div>
+                    <div class="escribir__frase--color escribir__frase--color--12"></div>
+                    <div class="escribir__frase--color escribir__frase--color--13"></div>
+                    <div class="escribir__frase--color escribir__frase--color--14"></div>
+                    <div class="escribir__frase--color escribir__frase--color--15"></div>
+                    <div class="escribir__frase--color escribir__frase--color--16"></div>
+                    <div class="escribir__frase--color escribir__frase--color--17"></div>
+                    <div class="escribir__frase--color escribir__frase--color--18"></div>
+                    <div class="escribir__frase--color escribir__frase--color--19"></div>
+                    <div class="escribir__frase--color escribir__frase--color--20"></div>
+                </div>
+            </div>
+
+            <div class="galeria__fila galeria__fila--escribir">
+                <h2 class="galeria__titulo--fila">Escribe tu frase ¡Inspírate!</h2>
+
+                <div class="contenedor__textArea">
+                    <textarea class="fraseEscrita" id="fraseEscrita" placeholder="Escribe aquí tu frase..."></textarea>
+                </div>
+            </div>
+
+            <div class="galeria__fila galeria__fila--escribir">
+                <h2 class="galeria__titulo--fila">Tu frase aparecerá aquí</h2>
+
+                <div class="escribir__frase--color escribir__frase--resultado" id="frase__resultado"></div>
+            </div>
+
+            <div class="contenedor__boton">
+                <button id="botonGuardarFrase" class="escribir__boton">Guardar frase</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer__redes">
+                <div class="redes__facebook" id="facebook"></div>
+                <div class="redes__instagram" id="instagram"></div>
+                <div class="redes__twitter" id="twitter"></div>
+            </div>
+            <div class="footer__copy">
+                <div class="copy__logo"></div>
+                <p class="copy__texto">2025 inspirAcción. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer__contacto">
+                <div class="contacto__logo"></div>
+                <a class="contacto__texto" href="https://www.youtube.com/">InspirAccion@gmail.com.ar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- NAVEGAR -->
+    <script type="module" src="scripts/navegar.js"></script>
+    <!-- GUARDAR FRASE -->
+     <script type="module" src="scripts/guardarFrase.js"></script>
+</body>
+</html>

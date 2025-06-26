@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InspirAcción</title>
+  <!-- FUENTE -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <!-- ICONO -->
+  <link rel="icon" href="../Imagenes/icono.svg" type="image/svg+xml">
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="../Estilos/style.css">
+</head>
+<body class="presentacion">
+    <div class="presentacion__contenedor">
+
+        <div class="titulo">
+            <div class="titulo__icono"></div>
+            <h1 class="titulo__texto">inspirAcción</h1>
+        </div>
+
+        <div class="parrafo">
+            <p class="parrafo__texto">
+                Bienvenido a inspirAcción,<br>el lugar donde tus pensamientos<br>
+                se transforman en InspirAcción.
+            </p>
+        </div>
+
+        <div class="login" id="abrirDialog">
+            <div class="login__boton">
+                <p>Iniciar Sesión</p>
+            </div>
+        </div>
+
+        <dialog class="dialog" id="dialog">
+            <form class="dialog_form" id="form" autocomplete="off">
+                <fieldset class="form_inputs">
+                    <legend class="form_leyenda">Registro</legend>
+                    <tr>
+                        <td><label for="nombre">Nombre:</label></td>
+                        <td><input type="text" name="nombre" id="nombre"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="apellido">Apellido:</label></td>
+                        <td><input type="text" name="apellido" id="apellido"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="user">Usuario:</label></td>
+                        <td><input type="text" name="user" id="user"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Correo electrónico:</label></td>
+                        <td><input type="email" name="email" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="fechaNacimiento">Fecha de Nacimiento:</label></td>
+                        <td><input class="date" type="date" name="fechaNacimiento" id="fechaNacimiento"></td>
+                    </tr>
+                    <tr>
+                        <label for="genero">Género:</label>
+                        <select name="genero" id="genero">
+                            <option value="">Seleccionar (opcional)</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="otro">Otro</option>
+                            <option value="prefiero-no-decirlo">Prefiero no decirlo</option>
+                        </select>
+                    </tr>
+                    <button class="submit" type="submit">Confirmar</button>
+                </fieldset>
+            </form>
+        </dialog>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- abrir y cerrar dialog -->
+    <script type="module" src="scripts/dialog.js"></script>
+    <!-- login -->
+     <script type="module" src="scripts/login.js"></script>
+</body>
+</html>

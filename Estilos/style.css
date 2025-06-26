@@ -1,0 +1,872 @@
+/* ESTILOS */
+/* VARIABLES */
+:root {
+    /* COLORES */
+    --blanco: #FFFFFF;
+    --grisFuerte: #222831;
+    --grisSuave: #393E46;
+    --gris: #948979;
+    --grisMuySuave: #DFD0B8;
+    --celesteClaro: #CCCCFF;
+    --rojizo: #fd984d;
+
+    /* BORDES */
+    --borde: 1px solid black;
+
+    /* TRANSICIONES */
+    --transicionSuave: all 0.3s ease;
+}
+/* ------------------- */
+
+/* ANIMACIONES */
+/* Animación 'sacudida' */
+@keyframes sacudida {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-4px); }
+  50%  { transform: translateX(4px); }
+  75%  { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+/* ------------------- */
+
+/* ASPECTOS GENERALES */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Quicksand', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background-color: rgb(255, 245, 245);
+}
+
+/* NAV */
+.nav{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    background-image: url("../Imagenes/icono.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 3.5em;
+    width: 12em;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.nav__botones{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin-right: 1em;
+}
+
+.botones{
+    width: 100%;
+}
+
+.botones__lista{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.botones__lista > li{
+    border-radius: 26px;
+    padding: 0 1em;
+}
+.botones__lista > li:hover{
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.perfil{
+    width: 3em;
+    height: 3em;
+    background-image: url('../Imagenes/user.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.perfil--nav:hover{
+    transform: scale(1.1);
+}
+
+/* ------------------- */
+
+/* FOOTER */
+.footer{
+    background-color: var(--grisFuerte);
+    color: var(--blanco);
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__redes{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+}
+
+.redes__facebook{
+    background-image: url("../Imagenes/facebook.svg");
+}
+
+.redes__instagram{
+    background-image: url("../Imagenes/instagram.svg");
+}
+
+.redes__twitter{
+    background-image: url("../Imagenes/twitter.svg");
+}
+
+.redes__facebook,
+.redes__instagram,
+.redes__twitter{
+    width: 3em;
+    background-position: center;
+    margin: 0.3em auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.redes__twitter{
+    width: 4em;
+}
+
+.redes__facebook:hover,
+.redes__instagram:hover,
+.redes__twitter:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.footer__copy{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy__logo{
+    width: 1em;
+    height: 1em;
+    background-image: url("../Imagenes/copyrigh.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.copy__texto{
+    font-size: x-small;
+}
+
+.footer__contacto{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto__logo{
+    width: 1em;
+    height: 1em;
+    background-image: url("../Imagenes/contactoEmail.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0.3em;
+}
+
+.contacto__texto{
+    color: var(--blanco);
+    font-size: small;
+    text-decoration: underline;
+}
+/* ------------------- */
+
+/* PAGINA PRESENTACIÓN */
+.presentacion{
+    background-image: url("../Imagenes/Páginas/atardecer-montañas.jpg");
+    background-size: cover;
+}
+
+.presentacion__contenedor{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TITULO */
+.titulo{
+    margin-top: 10em;
+    display: flex;
+    color: var(--grisFuerte);
+}
+
+.titulo__icono{
+    height: 3em;
+    width: 3em;
+    background-image: url("../Imagenes/idea-foco.svg");
+    background-size: cover;
+}
+
+/* PARRAFO */
+.parrafo{
+    margin-top: 0.5em;
+    text-align: center;
+    color: var(--grisMuySuave);
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/* LOGIN */
+.login{
+    margin-top: 2em;
+    padding: 1em 2em;
+    border-radius: 26px;
+    background-color: var(--rojizo);
+    color: var(--grisMuySuave);
+    box-shadow: 
+        0 10px 15px rgba(0, 0, 0, 0.2), 
+        0 4px 6px rgba(0, 0, 0, 0.1)
+    ;
+    transition: transform 0.3s ease;
+}
+
+.login:hover{
+    cursor: pointer;
+    color: var(--grisFuerte);
+    transform: translateY(-3px);
+}
+
+.login__boton > p{
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+/* DIALOG POP-UP */
+.dialog{
+    border: none;
+    width: 50%;
+    height: 70%;
+    padding: 1em;
+    background-color: var(--grisFuerte);
+    box-shadow: 
+        0 10px 15px rgba(255, 255, 255, 0.2), 
+        0 4px 6px rgba(255, 255, 255, 0.1)
+    ;
+    color: var(--blanco);
+    margin: auto;
+    border-radius: 12px;
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dialog_form{
+    height: 100%;
+}
+
+.form_inputs{
+    height: inherit;
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_leyenda{
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+label{
+    font-weight: 500;
+    margin: 0 2em;
+}
+
+input, select{
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) ;
+    margin: 0 auto auto auto;
+    color: var(--blanco);
+    font-family: 'Quicksand';
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 1) ;
+    transition: var(--transicionSuave);
+} 
+
+.date::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+option{
+    color: black;
+}
+
+.submit{
+    background-color: var(--blanco);
+    color: var(--grisFuerte);
+    margin: 0 auto;
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 26px;
+    font-size: medium;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 8px rgba(255, 255, 255, 0.2);
+}
+
+.submit:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+.submit:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* VALIDACIÓN FORMULARIO */
+input.invalido {
+  border-bottom: 2px solid #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+}
+/* ------------------- */
+
+/* PAGINA INICIO */
+/* .inicio{} */
+
+/* .inicio__contenedor{} */
+
+/* MARCA */
+.marca{
+    height: calc(100vh - 10vh);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)),
+        url("../Imagenes/Páginas/mujerMirandoHorizonte.jpg")
+    ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marca__titulo{
+    margin-top: 2em;
+    color: var(--blanco);
+    font-size: 3em;
+}
+
+.marca__texto--comilla{
+    font-size: 8em;
+    color: var(--rojizo);
+    opacity: 0.8;
+}
+
+.comillaIzquierda{
+    align-self: flex-start;
+    margin-left: 1em;
+}
+
+.comillaDerecha{
+    align-self: flex-end;
+    margin-right: 1em;
+}
+
+.marca__texto{
+    color: var(--blanco);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* FRASE */
+.frase{
+    height: calc(100vh - 10vh);
+    display: flex;
+    align-items: center;
+}
+
+.frase__contenedor{
+    height: 70vh;
+    width: 50vw;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: var(--grisFuerte);
+    border-radius: 26px;
+}
+
+.frase__imagen{
+    height: 90%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: inherit;
+}
+
+.frase__acciones{
+    height: 10%;
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.frase__boton--cambiar{
+    padding: 0.3em 1em;
+    border-radius: 26px;
+    background-color: var(--grisMuySuave);
+    color: var(--grisFuerte);
+    box-shadow: 
+        0 10px 15px rgb(0, 0, 0, 0.4), 
+        0 4px 6px rgba(0, 0, 0, 0.1)
+    ;
+    transition: all 0.3s ease;
+}
+
+.frase__boton--cambiar:hover{
+    color: var(--gris);
+}
+
+.frase__boton--me-gusta{
+    height: 2em;
+    width: 2em;
+    background-image: url("../Imagenes/likeBlanco.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.frase__boton--me-gusta:hover{
+    filter: invert(45%) sepia(100%) saturate(100%) hue-rotate(-80deg) brightness(100%) contrast(100%);
+}
+
+.frase__boton--compartir{
+    height: 2em;
+    width: 2em;
+    background-image: url("../Imagenes/compartirBlanco.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+}
+
+.frase__boton--compartir:hover{
+    filter: invert(63%) sepia(66%) saturate(456%) hue-rotate(89deg) brightness(93%) contrast(93%);
+}
+
+.frase__boton--cambiar:hover,
+.frase__boton--me-gusta:hover,
+.frase__boton--compartir:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* ------------------- */
+
+/* PÁGINA CATEGORIAS */
+/* GALERIA */
+/* .galeria{} */
+
+.galeria__titulo{
+    padding: 0.5em 0;
+    background-color: var(--grisFuerte);
+    color: var(--blanco);
+    text-align: center;
+    font-weight: 900;
+}
+
+.galeria__titulo--fila{
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+    font-weight: 100;
+}
+
+.galeria__fila{
+    margin: 3em 0;
+    padding: 1em 0.5em;
+    background-color: var(--grisMuySuave);
+}
+
+.galeria__carrusel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 250px;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.galeria__carrusel::-webkit-scrollbar {
+  display: none;
+}
+
+.carrusel__img,
+.escribir__frase--color {
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    scroll-snap-align: start;
+    cursor: pointer;
+}
+
+.carrusel__img:hover,
+.escribir__frase--color:hover {
+    transform: scale(1.03);
+}
+
+.frase-personalizada{
+    width: 100%;
+    height: 250px;
+    transition: transform 0.3s ease;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.frase-personalizada:hover{
+    transform: scale(1.03);
+}
+
+.ampliarImagen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 70vh;
+    max-width: 40vw;
+    z-index: 999;
+    border-radius: 26px;
+    padding: 5em;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+/* ------------------- */
+
+/* PÁGINA SOBRE INSPIRACCION */
+/* .contenido{} */
+
+.contenido{
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)),
+        url("../Imagenes/Páginas/atardecer-lago.jpg")
+    ;
+    background-position: center;
+    background-size: cover;
+}
+
+.contenido__seccion{
+    width: 70vw;
+    margin: 0 auto;
+    padding-bottom: 1em;
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+.contenido__texto{
+    color: var(--blanco);
+    width: 70%;
+    margin: 0 auto;
+}
+
+.historia, .mision{
+    padding: 2em 0;
+}
+
+.texto__titulo{
+    text-align: center;
+    padding-bottom: 0.5em;
+    color: var(--blanco);
+}
+
+span{
+    color: var(--rojizo);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.texto__parrafo{
+    font-weight: 100;
+}
+
+.cartas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.carta{
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20em;
+    width: 10em;
+    padding: 0 3em 1em;
+    border-radius: 26px;
+    overflow-x: hidden;
+}
+
+.carta__titulo{
+    color: var(--rojizo);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* PÁGINA PERFIL */
+.usuario{
+    height: 80vh;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+.usuario__datos{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.usuario__texto{
+    font-size: xx-large;
+    text-align: center;
+}
+
+.usuario__foto{
+    width: 7em;
+    height: 7em;
+    margin: 0 auto;
+    cursor: auto;
+}
+
+.usuario__nombre{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.usuario__mail{
+    margin: 0 auto;
+    font-size: small;
+    color: black;
+}
+
+.usuario__opcion{
+    padding: 10px;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.opcion{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.opcion:hover{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transform: scale(0.98);
+    cursor: pointer;
+}
+
+.opcion__titulo{
+    font-size: x-large;
+    font-weight: bold;
+    margin-left: 0.8em;
+    margin-top: 0.2em;
+}
+
+.opcion__texto{
+    text-align: start;
+    margin-left: 0.8em;
+    margin-top: 0.2em;
+}
+
+/* ------------------- */
+
+/* PÁGINA ESCRIBIR */
+.escribir__frase--color{
+    height: 160px;
+}
+
+.contenedor__textArea{
+    height: 160px;
+    text-align: center;
+}
+
+.fraseEscrita{
+    width: 50%;
+    height: 100%;
+    padding: 0.5em;
+    font-size: x-large;
+    border: none;
+    border-radius: 26px;
+    text-align: center;
+    transition: all 0.3s ease;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.fraseEscrita:focus{
+    transform: scale(1.1);
+    outline: none;
+}
+
+.escribir__frase--resultado{
+    background-color: rgb(255, 245, 245);
+    border: none;
+    width: 50%;
+    padding: 1em;
+    margin: 0 auto;
+    font-size: larger;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.contenedor__boton{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5em;
+}
+.escribir__boton{
+    background-color: var(--grisMuySuave);
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 26px;
+    font-size: medium;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 8px rgba(255, 255, 255, 0.2);
+}
+
+.escribir__boton:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+.escribir__boton:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* COLORES */
+.escribir__frase--color--uno{
+    background-color: var(--rojizo);
+}
+
+.escribir__frase--color--dos{
+    background-color: #cce7f0;
+}
+
+.escribir__frase--color--tres{
+    background-color: #ffe0cc;
+}
+
+.escribir__frase--color--cuatro{
+    background-color: var(--grisSuave);
+}
+
+.escribir__frase--color--cinco{
+    background-color: #e8dff5;
+}
+
+.escribir__frase--color--seis{
+    background-color: #d8f3dc;
+}
+
+.escribir__frase--color--siete{
+    background-color: var(--gris);
+}
+
+.escribir__frase--color--ocho{
+    background-color: var(--celesteClaro);
+}
+
+.escribir__frase--color--nueve{
+    background-color: var(--blanco);
+}
+
+.escribir__frase--color--10{
+    background-color: #b6eaee;
+}
+
+.escribir__frase--color--11{
+    background-color: #6d7faf;
+}
+
+.escribir__frase--color--12{
+    background-color: #c488b5;
+}
+
+.escribir__frase--color--13{
+    background-color: #c0eff7;
+}
+
+.escribir__frase--color--14{
+    background-color: #f4e9e5;
+}
+
+.escribir__frase--color--15{
+    background-color: #d8bdc2;
+}
+
+.escribir__frase--color--16{
+    background-color: #f2ec4c;
+}
+
+.escribir__frase--color--17{
+    background-color: #fdefec;
+}
+
+.escribir__frase--color--18{
+    background-color: #e0e1d1;
+}
+
+.escribir__frase--color--19{
+    background-color: #c0eff7;
+}
+
+.escribir__frase--color--20{
+    background-color: #ede2d4;
+}
+/* ------------------- */

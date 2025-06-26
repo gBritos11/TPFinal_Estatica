@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InspirAcción</title>
+  <!-- FUENTE -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <!-- ICONO -->
+  <link rel="icon" href="../Imagenes/icono.svg" type="image/svg+xml">
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="../Estilos/style.css">
+</head>
+<body class="inicio">
+  <div class="inicio__contenedor">
+    
+    <div class="nav">
+      <div class="nav__logo" id="inicio"></div>
+      <div class="nav__botones">
+        <div class="botones">
+          <ul class="botones__lista">
+            <li id="escribir">Escribir</li>
+            <li id="categoria">Categorías</li>
+            <li id="sobreInspiraccion">Sobre inspirAcción</li>
+          </ul>
+        </div>
+        <div class="perfil perfil--nav" id="perfil"></div>
+      </div>
+    </div>
+
+    <div class="marca">
+      <h1 class="marca__titulo">InspirAcción</h1>
+      <p class="marca__texto--comilla comillaIzquierda">“</p>
+      <p class="marca__texto">Encuentra la inspiración que tu día necesita.</p>
+      <p class="marca__texto--comilla comillaDerecha">”</p>
+    </div>
+
+    <div class="frase">
+      <div class="frase__contenedor">
+        <div class="frase__imagen" id="frase"></div>
+        <div class="frase__acciones">
+          <div class="frase__boton frase__boton--cambiar">
+            <p id="cambiarFrase">Cambiar frase</p>
+          </div>
+          <div class="frase__boton frase__boton--me-gusta" id="botonMeGusta"></div>
+          <div class="frase__boton frase__boton--compartir" id="botonCompartir"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer__redes">
+        <div class="redes__facebook" id="facebook"></div>
+        <div class="redes__instagram" id="instagram"></div>
+        <div class="redes__twitter" id="twitter"></div>
+      </div>
+      <div class="footer__copy">
+        <div class="copy__logo"></div>
+        <p class="copy__texto">2025 inspirAcción. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer__contacto">
+        <div class="contacto__logo"></div>
+        <a class="contacto__texto" href="https://www.youtube.com/">InspirAccion@gmail.com.ar</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SCRIPTS -->
+  <!-- NAVEGAR -->
+  <script type="module" src="scripts/navegar.js"></script>
+  <!-- cambiar frase -->
+  <script type="module" src="scripts/cambiarFrase.js"></script>
+  <!-- ESTADO DE LOS ME GUSTAS -->
+  <script type="module" src="scripts/estadoMeGusta.js"></script>
+</body>
+</html>
